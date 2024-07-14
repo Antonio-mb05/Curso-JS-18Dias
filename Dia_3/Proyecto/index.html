@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=ç, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Document</title>
+</head>
+<body onload="comenzarCuantaRegresiva()">
+    <h1>Test de Preguntas rápidas <span id="cuentaRegresiva"></span></h1>
+
+    <p>1. ¿Como te llamas?</p>
+    <input type="text" id="nombre">
+    <p>2. ¿Cuales son tus apellidos?</p>
+    <input type="text" id="apellidos">
+    <p>3. ¿Cuantos años tienes?</p>
+    <input type="number" id="edad">
+    <p>4. ¿De donde eres?</p>
+    <input type="text" id="lugar">
+    <p>5. ¿DNI?</p>
+    <input type="text" id="dni">
+    <br><br>
+    <button onclick="finalizado()">Terminé!</button>
+    <br><br>
+    <button onclick="volverAIntentar()">Volver a Intentar</button>
+
+    <audio id="audioFinal">
+        <source src="gameover.mp3" type="audio/mpeg">
+        Sonido no habilitado
+    </audio>
+
+    <script>
+        let tiempoTerminado;
+        let intervaloDeTiempo;
+
+        function comenzarCuantaRegresiva(){
+            tiempoTerminado = setTimeout(tiempoCumplido, 30000);
+            intervaloDeTiempo = setInterval(TicTac, 1000);
+
+            document.getElementById("cuentaRegresiva").textContent = 30;
+        }
+
+        function TicTac(){
+            let tiempo = document.getElementById("cuentaRegresiva").textContent;
+            document.getElementById("cuentaRegresiva").textContent = tiempo - 1;
+        }
+
+        function tiempoCumplido(){
+            clearInterval(intervaloDeTiempo);
+
+            document.getElementById("cuentaRegresiva").textContent = 0;
+            document.getElementById("audioFinal").play();
+            alert("GAME OVER: Se acabo el tiempo");
+
+        }
+        function finalizado(){
+           
+            clearInterval(tiempoTerminado);
+            clearInterval(intervaloDeTiempo);
+            
+            let fecha = new Date();   
+            let nombre = document.getElementById("nombre").value;
+            let apellidos = document.getElementById("apellidos").value;
+            let edad = document.getElementById("edad").value;
+            let lugar = document.getElementById("lugar").value;
+            let dni = document.getElementById("dni").value;
+            
+            let mensaje = "Nombre: " + nombre + " \nApellidos: " + apellidos + " \nEdad: " + edad + " \nLocalidad: " + lugar + " \nDNI: " + dni + " \nFecha de Realización: " + fecha.toLocaleDateString("es-ES");
+            alert(mensaje);
+        }
+
+        function volverAIntentar(){
+            location.reload();
+        }
+        
+    </script>
+</body>
+</html>
