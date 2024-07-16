@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+    <head>
+        <Title>Random</Title>
+    </head>
+    <body>
+        <button onclick="generaAleatorio(1,3)">Generar numero aleatorio</button>
+        <h1>Número Aleatorio: <span id="numeroAleatorio">---</span></h1>
+
+        <script>
+            let numeroAleatorio = document.getElementById("numeroAleatorio");
+            function generaAleatorio(minimo,maximo){
+                maximo = maximo + 1;
+                resultado = Math.floor(Math.random() * (maximo - minimo) + minimo);
+                numeroAleatorio.textContent = resultado;
+            }
+        </script>
+    </body>
+</html>
