@@ -1,0 +1,51 @@
+body{
+justify-content: center ;
+}
+div{
+    margin-left: 20%;
+    text-align: center;
+    background-color: bisque;
+    border: solid 1px black;
+    width: 50%;
+    border-radius: 20px;
+}
+input{
+    border-radius: 20px;
+    border: solid 2px rgb(140, 0, 255);
+    width: 300px;
+    height: 50px;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 50px;
+    background-color: rgb(217, 176, 255);
+}
+button{
+margin-top: 10px;
+    width: 150px;
+    height: 50px;
+    color: white;
+    border-radius: 10px;
+    border: solid 2px rgb(100, 0, 182);
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+    background-color:  rgb(100, 0, 182);
+}
+button:hover{
+    background-color: rgb(52, 0, 95);
+    border: rgb(52, 0, 95);
+}
+.boton2{
+    width: 300px;
+}
+#resultado{
+    border-radius: 20px;
+    border: solid 2px rgb(140, 0, 255);
+    width: 600px;
+    height: 50px;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 50px;
+    background-color: rgb(217, 176, 255);
+   
+}
