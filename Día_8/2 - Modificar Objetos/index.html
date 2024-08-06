@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+  <head>
+    <title>Modificar Objetos</title>
+  </head>
+
+  <body>
+    <script>
+      let perro = {
+        nombre: "simba",
+        raza: "Shih Tzu",
+        edad: 4,
+        ladrar(){
+          console.log("Guau");
+        }
+      };
+
+      function cumplirAnios() {
+        perro.edad++;
+      }
+
+      perro["colorOjos"] = "marron";
+      
+    </script>
+  </body>
+</html>
