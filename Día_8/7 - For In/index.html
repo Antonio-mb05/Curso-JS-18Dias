@@ -4,6 +4,21 @@
   </head>
 
   <body>
+    <script>
+     function Perro(raza, edad) {
+        this.patas = 4;
+        this.raza = raza;
+        this.edad = edad;
+        this.ladrar = function () {
+          console.log("Guau")
+        };
+      }
+      let simba = new Perro("Shih Tzu", 4);
+      let reina = new Perro("Caniche", 15);
 
+      for(let caracteristica in simba){
+        console.log(caracteristica + ": " + simba[caracteristica])
+      }
+    </script>
   </body>
 </html>
