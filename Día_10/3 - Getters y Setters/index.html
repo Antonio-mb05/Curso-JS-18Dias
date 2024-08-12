@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+  <head>
+    <title>Getters y Setters</title>
+  </head>
+
+  <body>
+    <script>
+      class Deportista{
+        constructor(nombre,apellidos){
+          this.nombre = nombre;
+          this.apellidos = apellidos;
+        }
+      }
+
+      class Futbolista extends Deportista{
+        constructor(nombre,apellidos,goles){
+          super(nombre,apellidos);
+          this._goles = goles;
+        }
+
+        get goles(){
+          return this._goles;
+        }
+
+        set goles(nuevoGoles){
+          this._goles = nuevoGoles;
+        }
+
+
+      }
+    </script>
+  </body>
+</html>
