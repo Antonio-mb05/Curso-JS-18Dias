@@ -1,0 +1,13 @@
+{
+    "nombre": "Antonio Márquez",
+    "edad": 19,
+    "esEstudiante": true,
+    "direccion": {
+        "calle": "Av. San Francisco",
+        "ciudad": "Sanlucar de Barrameda"
+    },
+    "telefonos": [
+        "617-54-47-20",
+        "643-48-67-23"
+    ]
+}
