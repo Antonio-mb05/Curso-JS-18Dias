@@ -1,0 +1,8 @@
+{
+    "banco": "Banco Santander",
+    "sucursal": "Sanlucar de Barrameda",   
+    "nombre": "Antonio Márquez Barrios",
+    "numCuenta": "123456789",
+    "saldo": [ { "moneda": "USD", "monto": 725.09 }, { "moneda": "EUR", "monto": 195.67} ],
+    "CVV": "123"
+}
