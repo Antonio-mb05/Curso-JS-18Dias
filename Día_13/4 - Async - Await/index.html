@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+  <head>
+    <title>Async/Await</title>
+  </head>
+  <body>
+    <script>
+      async function obtenerTodo(){
+        let respuestaGasolina = await fetch("https://api.datos.gob.mx/v1/precio.gasolina.publico");
+        let datosGasolina = await respuestaGasolina.json();
+
+        let respuestaDolar = await fetch("https://api.datos.gob.mx/v1/precio.gasolina.publico");
+        let datosDolar = await respuestaDolar.json();
+        console.log(datosGasolina, datosDolar);
+      }
+
+      obtenerTodo();
+      
+    </script>
+  </body>
+</html>
