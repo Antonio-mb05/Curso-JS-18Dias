@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Document</title>
+</head>
+<body onload="cargarTabla()">
+    <h1>Registro de Telefonos</h1>
+    <hr>
+    <table>
+        <thead>
+            <tr>
+            <th>Id</th>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Color</th>
+            <th>Almacenamiento</th>
+            <th>Procesador</th>
+            </tr>
+        </thead>
+        <tbody id="miTabla">    
+        </tbody>
+    </table>
+
+    <h3>Consultar Telefonos</h3>
+    <hr style="width: 20%;">
+
+    <input style="width: 100px;" type="number" min="1" max="10" placeholder="Ingresa Id">
+    <button onclick="consultar()">Consultar</button>
+
+    <br><br>
+    <textarea id="id"></textarea> <br><br>
+    <textarea id="marca"></textarea> <br><br>
+    <textarea id="modelo"></textarea> <br><br>
+    <textarea id="color"></textarea> <br><br>
+    <textarea id="almacenamiento"></textarea> <br><br>
+    <textarea id="procesador"></textarea> <br><br>
+
+    <button onclick="modificar()">Modificar</button>
+    <button onclick="borrar()">Borrar</button>
+
+    <h3>Agregar Telefono</h3>
+    <hr style="width: 20%;">
+    <input type="text" id="nuevoId" placeholder="Id"> <br><br>
+    <input type="text" id="nuevoMarca" placeholder="Marca"> <br><br>
+    <input type="text" id="nuevoModelo" placeholder="Modelo"> <br><br>
+    <input type="text" id="nuevoColor" placeholder="Color"> <br><br>
+    <input type="text" id="nuevoAlmacenamiento" placeholder="Almacenamiento"> <br><br>
+    <input type="text" id="nuevoProcesador" placeholder="Procesador"> <br><br>
+
+    <button onclick="agregar()">Agregar</button>
+
+</body>
+<script src="misScripts.js"></script>
+</html>
